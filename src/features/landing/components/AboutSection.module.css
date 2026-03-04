@@ -1,0 +1,67 @@
+.section {
+  padding: 4rem 0; /* Espaçamento no topo e embaixo da seção */
+}
+
+/* --- MOBILE FIRST (Padrão) --- */
+.wrapper {
+  display: flex;
+  flex-direction: column-reverse; /* No mobile, o texto fica embaixo da imagem */
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+}
+
+.textContent {
+  flex: 1;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-color, #1a1a1a);
+  line-height: 1.2;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-light, #4a4a4a);
+}
+
+.imageContent {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profileImage {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px; /* Deixa as bordas levemente quadradas como na imagem */
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Dá um leve destaque na foto */
+}
+
+/* --- DESKTOP (Telas grandes) --- */
+@media (min-width: 992px) {
+  .wrapper {
+    flex-direction: row; /* Coloca lado a lado */
+    text-align: left; /* Alinha o texto à esquerda novamente */
+    justify-content: space-between;
+    gap: 4rem;
+  }
+
+  .title {
+    font-size: 3rem; /* Título maior na tela grande */
+  }
+
+  .description {
+    font-size: 1.25rem;
+  }
+
+  /* Se quiser que a imagem fique um pouco maior no desktop */
+  .profileImage {
+    max-width: 400px;
+  }
+}

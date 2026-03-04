@@ -1,0 +1,48 @@
+.navbarContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+/* O Nav fica escondido ou em coluna no mobile */
+.nav {
+  display: none; /* Esconde os links por padrão no mobile */
+  flex-direction: column;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 70px);
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  z-index: 999;
+}
+
+.open.nav {
+  display: flex; /* Mostra os links quando o menu estiver aberto */
+}
+
+/* --- Telas Grandes --- */
+
+@media (min-width: 1200px) {
+  .navbarContent {
+    display: flex;
+    justify-content: center; /* Centraliza o que estiver vivo aqui dentro */
+    align-items: center;
+    width: 100%;
+    position: relative; /* Para garantir controle */
+  }
+
+  .nav {
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    position: static; /* Volta ao fluxo normal */
+    height: auto; /* Ajusta a altura para o conteúdo */
+  }
+  .hamburgerWrapper {
+    display: none;
+  }
+}
