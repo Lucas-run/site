@@ -1,13 +1,33 @@
+import { useEffect, useState } from "react";
+import styles from "./PortfolioSection.module.css";
+import { getFeaturedProjects } from "../services/portfolio.service";
+import { Container } from "../../../components/ui/Container";
+import { ProjectCard } from "../../../components/ui/ProjectCard";
+
+interface Project {
+  id: string;
+  name: string;
+  description: string;
+  thumbnail: string;
+}
+
 export function PortfolioSection() {
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    getFeaturedProjects().then((data) => setProjects(data));
+  }, []);
+
   return (
-    <div className="flex flex-col items-center gap-4">
-      <h2 className="text-2xl font-bold">About Us</h2>
-      <p className="text-center max-w-2xl">
-        We are a team of passionate developers dedicated to creating innovative
-        solutions that empower businesses and individuals alike. Our mission is
-        to deliver high-quality software that meets the needs of our clients
-        while fostering a collaborative and inclusive work environment.
-      </p>
-    </div>
+    <section id="portfolio" className={styles.section}>
+      <Container>
+        <h2 className={styles.title}>Projetos em Destaque</h2>
+        <div className={styles.grid}>
+          {projects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
+          ))}
+        </div>
+      </Container>
+    </section>
   );
 }

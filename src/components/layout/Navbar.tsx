@@ -29,10 +29,10 @@ export default function Navbar() {
             <Link to="/" onClick={closeMenu}>
               Home
             </Link>
-            <a href="#" onClick={closeMenu}>
+            <a href="#sobre" onClick={closeMenu}>
               Sobre
             </a>
-            <a href="#" onClick={closeMenu}>
+            <a href="#servicos" onClick={closeMenu}>
               Serviços
             </a>
             <Link to="/blog" onClick={closeMenu}>

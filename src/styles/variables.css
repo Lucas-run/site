@@ -1,6 +1,47 @@
 :root {
-  --primary-color: #2563eb;
+  /* Background */
+  /* No seu variables.css ou no container principal */
+  --bg-main:
+    radial-gradient(at 0% 0%, hsla(222, 47%, 11%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(222, 47%, 15%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(263, 47%, 11%, 1) 0, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(222, 47%, 11%, 1) 0, transparent 50%);
+
   --bg-color: #f8fafc;
+  --bg-surface: #d0d6d8; /* Fundo de elementos que "flutuam", como Cards e Navbar */
+  --bg-alt: #e2e8f0; /* Fundo alternativo para seções inteiras (ex: diferenciar o Sobre do Portfólio) */
+  --card-bg: #0f172a; /* Fundo dos Cards do portfólio (cinza escuro, quase preto) */
+
+  /* Textos */
+  --text-color: #0f172a; /* Texto principal (quase preto, tom de "ardósia" escuro) */
+  --text-muted: #f8f8f8; /* Texto secundário para descrições ou datas no blog (cinza frio) */
+  /* --text-muted: #d7d7d8; */
+  /* Bordas e divisores */
+  --border-color: #cbd5e1;
+
+  /* Cores de destaque */
+  --primary-color: #1e3a8a; /* Azul escuro corporativo/tech (Botões principais, ícones de destaque) */
+  --primary-hover: #172554; /* Um azul ainda mais escuro para o hover do botão */
+  --primary-light: #dbeafe; /* Azul muito clarinho (ótimo para fundo de badges ou tags do blog) */
+  --primary-dark: #381e8a;
+  --danger: #8a381e;
+
+  /* Medidas */
   --container-width: 1200px;
-  --border-radius: 8px;
+  --border-radius-sm: 4px; /* Para botões pequenos ou badges */
+  --border-radius-md: 8px; /* Para Cards do portfólio */
+  --border-radius-lg: 16px; /* Para seções ou imagens grandes */
+
+  /* Sombras  */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+  --shadow-dark-mode:
+    0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+
+  /* Borda sutil que substitui a sombra */
+  --card-border: 1px solid rgba(255, 255, 255, 0.08);
+
+  /* Brilho primário (Glow) para o hover */
+  --primary-glow: 0 0 15px rgba(37, 99, 235, 0.2);
 }

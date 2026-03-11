@@ -10,6 +10,7 @@
   display: none; /* Esconde os links por padrão no mobile */
   flex-direction: column;
   position: fixed;
+  background-color: var(--bg-surface);
   top: 70px;
   left: 0;
   width: 100%;
@@ -37,10 +38,13 @@
 
   .nav {
     display: flex;
+    padding: 1rem 0;
     gap: 2rem;
     flex-direction: row;
     position: static; /* Volta ao fluxo normal */
     height: auto; /* Ajusta a altura para o conteúdo */
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
   }
   .hamburgerWrapper {
     display: none;

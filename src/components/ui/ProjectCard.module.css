@@ -1,0 +1,79 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg, #ffffff);
+  border-radius: 12px;
+  overflow: hidden; /* Garante que a imagem não vaze das bordas arredondadas */
+  text-decoration: none; /* Remove o sublinhado padrão do Link */
+  color: inherit;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border: 1px solid #eaeaea; /* Borda sutil */
+}
+
+/* Efeito ao passar o mouse no Card inteiro */
+.card:hover {
+  transform: translateY(-5px); /* Levanta o card */
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* --- ÁREA DA IMAGEM --- */
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Mantém a proporção de thumbnail de vídeo/artigo */
+  overflow: hidden; /* Necessário para o zoom não vazar */
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Preenche o espaço sem distorcer a imagem */
+  transition: transform 0.5s ease; /* Animação suave para o zoom */
+}
+
+/* O zoom na imagem acontece quando fazemos hover no CARD */
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+/* --- ÁREA DE CONTEÚDO (Texto) --- */
+.content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Faz o conteúdo empurrar o link para o final se os textos tiverem tamanhos diferentes */
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text-muted);
+}
+
+.description {
+  font-size: 1rem;
+  color: var(--text-light, #666666);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  flex-grow: 1; /* Preenche o espaço vazio */
+}
+
+.linkText {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-color, #2563eb);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card:hover .linkText {
+  text-decoration: underline; /* Reforça que é clicável no hover */
+}

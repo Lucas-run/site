@@ -1,0 +1,56 @@
+/* Box model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* margin: 0; */
+  /* padding: 0; */
+}
+
+/* Body */
+body {
+  line-height: 1.6;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: var(--bg-main);
+  color: var(--text-color);
+}
+
+/* Midia responsiva */
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Botões e Forms */
+input,
+button,
+textarea,
+select {
+  font: inherit; /* Força inputs a usarem a mesma fonte do body */
+  color: inherit;
+}
+
+/* Acessibilidade */
+[tabindex="-1"]:focus {
+  outline: none;
+}
+
+a {
+  color: var(--primary-color, #2563eb);
+  text-decoration: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
