@@ -2,8 +2,8 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 
-// Importing the CSS file for global styles
-import "./index.css"; //talvez apagar
+// CSS global e variáveis
+import "./styles/global.css";
 import "./styles/variables.css";
 
 createRoot(document.getElementById("root")!).render(

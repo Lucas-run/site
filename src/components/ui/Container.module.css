@@ -1,6 +1,5 @@
 .container {
   max-width: var(--container-width);
-  background-color: var(--bg-color);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius-lg);
   margin: 0 auto;
 }

@@ -1,0 +1,48 @@
+.section {
+  padding: 6rem 0;
+}
+
+.header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem; /* Centraliza o cabeçalho e dá espaço para o grid */
+  padding: 0 1rem;
+}
+
+.mainTitle {
+  font-size: 2.25rem;
+  color: var(--text-main, #0f172a);
+  margin-bottom: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: var(--text-color, #64748b);
+  line-height: 1.6;
+}
+
+/* --- MOBILE FIRST (Padrão) --- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem; /* Espaçamento ligeiramente menor para dar aspecto de 'ferramentas' */
+  padding: 0 1rem;
+}
+
+/* --- TABLET: 2 Colunas --- */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- DESKTOP: 3 Colunas (Row) --- */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0;
+  }
+}

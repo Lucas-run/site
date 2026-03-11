@@ -1,0 +1,90 @@
+.footer {
+  background-color: var(--card-bg, #0f172a);
+  color: var(--primary-light);
+  position: absolute;
+  left: 0;
+  padding: 4rem 0.5rem 2rem;
+
+  width: 100%;
+  margin-top: auto; /* Garante que o footer fique embaixo em páginas curtas */
+}
+
+.topContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.brand .name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary-light, #dbeafe);
+}
+
+.brand .tagline {
+  color: var(--text-muted, #94a3b8);
+  max-width: 300px;
+  font-size: 0.95rem;
+}
+
+.linksGroup h4,
+.socialGroup h4 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  /* margin-bottom: 1.5rem; */
+  color: var(--text-muted, #94a3b8);
+}
+
+.linksGroup nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.linksGroup a {
+  color: var(--text-muted, #94a3b8);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.linksGroup a:hover {
+  color: var(--primary-color, #2563eb);
+}
+
+.icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.icons a {
+  color: var(--primary-color);
+  transition:
+    transform 0.2s,
+    color 0.2s;
+}
+
+.icons a:hover {
+  color: var(--primary-color, #2563eb);
+  transform: translateY(-3px);
+}
+
+.bottomBar {
+  /* padding-top: 2rem; */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted, #94a3b8);
+}
+
+/* --- DESKTOP --- */
+@media (min-width: 768px) {
+  .topContent {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}

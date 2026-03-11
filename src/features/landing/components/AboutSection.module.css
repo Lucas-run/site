@@ -1,5 +1,5 @@
 .section {
-  padding: 4rem 0; /* Espaçamento no topo e embaixo da seção */
+  padding: 2rem 0; /* Espaçamento no topo e embaixo da seção */
 }
 
 /* --- MOBILE FIRST (Padrão) --- */
@@ -9,6 +9,9 @@
   align-items: center;
   gap: 3rem;
   text-align: center;
+  background-color: var(--bg-alt);
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
 }
 
 .textContent {
@@ -18,14 +21,14 @@
 .title {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: var(--text-color, #1a1a1a);
+  color: var(--text-color);
   line-height: 1.2;
 }
 
 .description {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: var(--text-light, #4a4a4a);
+  color: var(--text-light);
 }
 
 .imageContent {
@@ -35,12 +38,15 @@
 }
 
 .profileImage {
-  width: 100%;
+  /* width: 100%; */
   max-width: 300px;
   height: auto;
-  border-radius: 8px; /* Deixa as bordas levemente quadradas como na imagem */
-  object-fit: cover;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Dá um leve destaque na foto */
+  max-height: 350px;
+  padding: 1px;
+  border-radius: 66% 34% 60% 40% / 40% 62% 38% 60%; /* Dá um formato orgânico e fluido */
+  object-fit: contain;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Dá um leve destaque na foto */
+  transition: transform 0.3s ease;
 }
 
 /* --- DESKTOP (Telas grandes) --- */

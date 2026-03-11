@@ -1,0 +1,34 @@
+.section {
+  padding: 5rem 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: var(--text-color, #1a1a1a);
+}
+
+/* --- MOBILE FIRST: 1 Coluna --- */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 coluna ocupando 100% */
+  gap: 2rem; /* Espaço entre os cards */
+  padding: 0 1rem;
+}
+
+/* --- TABLET: 2 Colunas --- */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- DESKTOP: 3 Colunas --- */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    padding: 0;
+  }
+}
