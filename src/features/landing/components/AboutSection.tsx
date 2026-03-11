@@ -20,7 +20,7 @@ export function AboutSection() {
           {/* Lado Direito: Imagem */}
           <div className={styles.imageContent}>
             <img
-              src="/sua-foto.jpg" // Coloque "sua-foto.jpg" na pasta public/ do Vite
+              src={`${import.meta.env.BASE_URL}sua-foto.jpg`} // Coloque "sua-foto.jpg" na pasta public/ do Vite
               alt="Foto de perfil"
               className={styles.profileImage}
             />
