@@ -3,11 +3,14 @@ import { Container } from "../ui/Container";
 import { Hamburger } from "../ui/Hamburger";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
+import { useScrollTo } from "../../hooks/useScrollTo";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const closeMenu = () => setIsOpen(false);
+
+  const scrollTo = useScrollTo();
 
   useEffect(() => {
     if (isOpen) {
@@ -29,10 +32,13 @@ export default function Navbar() {
             <Link to="/" onClick={closeMenu}>
               Home
             </Link>
-            <a href="#sobre" onClick={closeMenu}>
+            <a href="#sobre" onClick={(e) => scrollTo(e, "sobre", closeMenu)}>
               Sobre
             </a>
-            <a href="#servicos" onClick={closeMenu}>
+            <a
+              href="#servicos"
+              onClick={(e) => scrollTo(e, "servicos", closeMenu)}
+            >
               Serviços
             </a>
             <Link to="/blog" onClick={closeMenu}>
