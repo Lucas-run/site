@@ -1,7 +1,7 @@
 export async function getFeaturedProjects() {
   // Aqui você chamará sua API real
 
-  const response = await fetch("https://site-backend-0zrw.onrender.com/projects/projects", {
+  const response = await fetch("/projects/projects", {
     headers: {
       "Content-Type": "application/json",
     },
