@@ -4,6 +4,7 @@ import { Home } from "./pages/Home";
 import { Blog } from "./pages/Blog";
 import { Footer } from "./components/layout/Footer";
 import { useAnalytics } from "./hooks/useAnalytics";
+import { MarketingAutomations } from "./pages/MarketingAutomations";
 
 function AnalyticsWrapper() {
   useAnalytics();
@@ -20,6 +21,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
+            <Route
+              path="/marketing-automations"
+              element={<MarketingAutomations />}
+            />
           </Routes>
         </main>
 
