@@ -1,0 +1,167 @@
+/* HeroOffer.module.css */
+
+.heroSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  min-height: 80vh;
+  padding: 4rem 0;
+}
+
+.textColumn {
+  flex: 1;
+  max-width: 600px;
+  z-index: 2;
+}
+
+.imageColumn {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* --- TEXTOS E DESTAQUES --- */
+
+.badge {
+  display: inline-block;
+  background-color: rgba(255, 109, 0, 0.15); /* Fundo alaranjado translúcido */
+  color: #ff8a00;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 109, 0, 0.3);
+}
+
+.title {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  color: var(--text-color, #ffffff);
+  margin-bottom: 1.5rem;
+}
+
+.highlight {
+  /* Gradiente moderno estilo "Tech/Vendas" */
+  background: linear-gradient(90deg, #00e676 0%, #00b0ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #9ca3af; /* Cinza claro, confortável de ler */
+  margin-bottom: 2.5rem;
+}
+
+/* --- BOTÃO (CTA) --- */
+
+.ctaButton {
+  background: linear-gradient(
+    135deg,
+    #ff6d00 0%,
+    #ff3d00 100%
+  ); /* Laranja de alta conversão */
+  color: white;
+  border: none;
+  padding: 1.2rem 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px -5px rgba(255, 109, 0, 0.4);
+  width: 100%;
+  max-width: 400px;
+  text-transform: uppercase;
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px -5px rgba(255, 109, 0, 0.6);
+  filter: brightness(1.1);
+}
+
+.ctaButton:active {
+  transform: translateY(1px);
+}
+
+/* --- GARANTIA --- */
+
+.guarantee {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lockIcon {
+  font-size: 1.1rem;
+}
+
+/* --- IMAGEM E EFEITOS --- */
+
+.heroImage {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.imageGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 230, 118, 0.15) 0%,
+    transparent 70%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* --- RESPONSIVIDADE (MOBILE) --- */
+
+@media (max-width: 992px) {
+  .heroSection {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0;
+    gap: 3rem;
+  }
+
+  .textColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .ctaButton {
+    max-width: 100%;
+  }
+}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container } from "../ui/Container";
 import { Hamburger } from "../ui/Hamburger";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { useScrollTo } from "../../hooks/useScrollTo";
 
@@ -11,6 +11,21 @@ export default function Navbar() {
   const closeMenu = () => setIsOpen(false);
 
   const scrollTo = useScrollTo();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigation = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string,
+  ) => {
+    if (location.pathname === "/") {
+      // Se já estiver na Home, usa o seu hook de scroll suave
+      scrollTo(e, id, closeMenu);
+    } else {
+      navigate(`/`);
+      scrollTo(e, id, closeMenu);
+    }
+  };
 
   useEffect(() => {
     if (isOpen) {
@@ -32,12 +47,12 @@ export default function Navbar() {
             <Link to="/" onClick={closeMenu}>
               Home
             </Link>
-            <a href="#sobre" onClick={(e) => scrollTo(e, "sobre", closeMenu)}>
+            <a href="#sobre" onClick={(e) => handleNavigation(e, "sobre")}>
               Sobre
             </a>
             <a
               href="#servicos"
-              onClick={(e) => scrollTo(e, "servicos", closeMenu)}
+              onClick={(e) => handleNavigation(e, "servicos")}
             >
               Serviços
             </a>

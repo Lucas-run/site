@@ -1,10 +1,10 @@
-import Navbar from "./components/layout/Navbar";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Blog } from "./pages/Blog";
-import { Footer } from "./components/layout/Footer";
 import { useAnalytics } from "./hooks/useAnalytics";
 import { MarketingAutomations } from "./pages/MarketingAutomations";
+import { MainLayout } from "./components/layout/MainLayout";
+import { PackMarketingPage } from "./pages/PackMarketingPage";
 
 function AnalyticsWrapper() {
   useAnalytics();
@@ -16,19 +16,20 @@ function App() {
     <>
       <Router>
         <AnalyticsWrapper />
-        <Navbar />
-        <main>
-          <Routes>
+        <Routes>
+          {/* Site Institucional */}
+          <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
             <Route
               path="/marketing-automations"
               element={<MarketingAutomations />}
             />
-          </Routes>
-        </main>
+          </Route>
 
-        <Footer />
+          {/* Landing Pages */}
+          <Route path="/pack-marketing" element={<PackMarketingPage />} />
+        </Routes>
       </Router>
     </>
   );

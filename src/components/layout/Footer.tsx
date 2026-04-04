@@ -1,9 +1,28 @@
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useScrollTo } from "../../hooks/useScrollTo";
 import { Container } from "../ui/Container";
 import styles from "./Footer.module.css";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const scrollTo = useScrollTo();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigation = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string,
+  ) => {
+    if (location.pathname === "/") {
+      // Se já estiver na Home, usa o seu hook de scroll suave
+      scrollTo(e, id);
+    } else {
+      navigate(`/`);
+      scrollTo(e, id);
+    }
+  };
 
   return (
     <footer className={styles.footer}>
@@ -19,10 +38,23 @@ export function Footer() {
           <div className={styles.linksGroup}>
             <h4>Navegação</h4>
             <nav>
-              <a href="#sobre">Sobre</a>
-              <a href="#servicos">Serviços</a>
-              <a href="#portfolio">Portfólio</a>
-              <a href="/blog">Blog</a>
+              <Link to="/">Home</Link>
+              <a href="#sobre" onClick={(e) => handleNavigation(e, "sobre")}>
+                Sobre
+              </a>
+              <a
+                href="#servicos"
+                onClick={(e) => handleNavigation(e, "servicos")}
+              >
+                Serviços
+              </a>
+              <a
+                href="#portfolio"
+                onClick={(e) => handleNavigation(e, "portfolio")}
+              >
+                Portfólio
+              </a>
+              <Link to="/blog">Blog</Link>
             </nav>
           </div>
 

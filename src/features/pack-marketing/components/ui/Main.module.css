@@ -1,0 +1,13 @@
+.mainContainer {
+  width: 105vw;
+  height: fit-content;
+  margin: 0;
+  padding: 0;
+  background-color: #04020c;
+  position: relative;
+  left: -10px;
+  bottom: -10px;
+  top: -10px;
+  /* right: -10px; */
+  padding: 10px;
+}
