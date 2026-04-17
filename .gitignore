@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+.openclaude-profile.json
 
 # Editor directories and files
 .vscode/*
