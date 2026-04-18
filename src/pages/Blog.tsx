@@ -13,6 +13,7 @@ export function Blog() {
   useEffect(() => {
     async function fetchData() {
       const articles = await getArticles();
+      console.log("Dados que chegaram no Front:", articles);
       setArticles(articles);
       setLoading(false);
     }

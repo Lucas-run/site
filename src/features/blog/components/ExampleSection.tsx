@@ -1,19 +1,30 @@
-import React from 'react';
+// import React from 'react';
 import styles from './ExampleSection.module.css';
 
-interface ExampleSectionProps {
-  examples: string[]; // Assume we're passing an array of example codes or blocks
+interface Example {
+  title: string;
+  description?: string;
+  imageUrl?: string;
+  codeSnippet?: string;
 }
 
-const ExampleSection: React.FC<ExampleSectionProps> = ({ examples }) => {
+interface ExampleSectionProps {
+  examples: Example[];
+}
+
+
+export const ExampleSection = ({ examples }: ExampleSectionProps) => {
   return (
-    <div className={styles.examples}>
-      {examples.map((example, index) => (
-        <pre key={index} className={styles.exampleBlock}>
-          <code>{example}</code>
-        </pre>
+    <section>
+      {examples.map((ex, index) => (
+        <div key={index} className={styles.exampleCard}>
+          <h3>{ex.title}</h3>
+          {ex.description && <p>{ex.description}</p>}
+          {ex.imageUrl && <img src={ex.imageUrl} alt={ex.title} />}
+          {ex.codeSnippet && <pre><code>{ex.codeSnippet}</code></pre>}
+        </div>
       ))}
-    </div>
+    </section>
   );
 };
 

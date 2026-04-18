@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import {
   type Article,
@@ -35,7 +35,7 @@ export function ArticleView() {
         <>
           <IntroSection article={article} />
           <ArticleSection article={article} />
-          <ExampleSection examples={article.tags.map((tag) => tag.example)} />
+          {article.examples && article.examples.length > 0 && <ExampleSection examples={article.examples} />}
         </>
       )}
     </div>

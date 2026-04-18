@@ -8,12 +8,20 @@ export interface Article {
   published: boolean;
   createdAt: Date;
   updatedAt: Date;
-  // Assuming author and tags are other models not included in this snippet
+  examples?: example[];
+
   author: any; // Replace with proper User type
   tags: any[]; // Replace with proper Tag type
 }
 
-const API_URL = 'https://your-api-url.com'; // Replace with your actual API URL
+export interface example {
+  title: string;
+  description?: string;
+  imageUrl?: string;
+  codeSnippet?: string;
+}
+
+const API_URL = ''; // Replace with your actual API URL
 
 export async function getArticles(): Promise<Article[]> {
   const response = await fetch(`${API_URL}/articles`);

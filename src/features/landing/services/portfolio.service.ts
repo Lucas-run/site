@@ -8,7 +8,8 @@ export async function getFeaturedProjects() {
   });
 
   return response.json();
-
+  
+}
   // Mock para teste:
   // return [
   //   {
@@ -30,4 +31,3 @@ export async function getFeaturedProjects() {
   //     thumbnail: "/projects/frontend-case.jpg",
   //   },
   // ];
-}
