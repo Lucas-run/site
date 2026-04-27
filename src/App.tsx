@@ -6,6 +6,8 @@ import { MarketingAutomations } from "./pages/MarketingAutomations";
 import { MainLayout } from "./components/layout/MainLayout";
 import { PackMarketingPage } from "./pages/PackMarketingPage";
 import { ArticleView } from "./pages/ArticleView";
+import { Projects } from "./pages/Projects";
+import { ProjectView } from "./pages/ProjectView";
 
 function AnalyticsWrapper() {
   useAnalytics();
@@ -23,6 +25,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<ArticleView />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/projects/:slug" element={<ProjectView />} />
             <Route
               path="/marketing-automations"
               element={<MarketingAutomations />}

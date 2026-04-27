@@ -1,19 +1,8 @@
 import { Link } from "react-router-dom";
 import styles from "./ProjectCard.module.css";
+import type { Project } from "../../features/landing/services/portfolio.service";
 
-interface ProjectCardProps {
-  id: string;
-  name: string;
-  description: string;
-  thumbnail: string; // URL da imagem vinda da sua API
-}
-
-export function ProjectCard({
-  id,
-  name,
-  description,
-  thumbnail,
-}: ProjectCardProps) {
+export function ProjectCard({ id, name, description, thumbnail }: Project) {
   return (
     <Link to={`/blog/${id}`} className={styles.card}>
       <div className={styles.imageWrapper}>

@@ -13,8 +13,12 @@
   margin-bottom: 1.5rem;
 }
 
-.exampleBlock code {
+.exampleCard pre {
   color: var(--primary-light);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 0.95rem;
+  padding: 1rem;
+  /* background-color: var(--code-bg); */
+  background-color: #313131;
+  border-radius: 8px;
 }

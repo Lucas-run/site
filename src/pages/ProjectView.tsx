@@ -9,19 +9,24 @@ import ArticleSection from "../features/blog/components/ArticleSection";
 import ExampleSection from "../features/blog/components/ExampleSection";
 import styles from "./ArticleView.module.css";
 
-export function ArticleView() {
+type ProjectArticle = Article & {
+  projectId?: string | null;
+};
+
+export function ProjectView() {
   const { slug } = useParams<{ slug: string }>();
-  const [article, setArticle] = useState<Article | null>(null);
+  const [article, setArticle] = useState<ProjectArticle | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
       if (slug) {
-        const fetchedArticle = await getArticleBySlug(slug);
-        setArticle(fetchedArticle);
+        const fetchedArticle = (await getArticleBySlug(slug)) as ProjectArticle;
+        setArticle(fetchedArticle.projectId ? fetchedArticle : null);
         setLoading(false);
       }
     }
+
     fetchData();
   }, [slug]);
 

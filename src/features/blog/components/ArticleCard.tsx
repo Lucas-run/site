@@ -16,7 +16,8 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
       onClick={() => navigate(`/blog/${article.slug}`)}
     >
       <img
-        src={`https://your-image-url.com/${article.slug}-thumbnail.jpg`}
+        // src={`https://your-image-url.com/${article.slug}-thumbnail.jpg`}
+        src={article.coverImage}
         alt={article.title}
         className={styles.thumbnail}
       />

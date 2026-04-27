@@ -3,6 +3,7 @@ export interface Article {
   title: string;
   slug: string;
   excerpt?: string;
+  coverImage?: string;
   content: string;
   authorId: string;
   published: boolean;
@@ -21,12 +22,12 @@ export interface example {
   codeSnippet?: string;
 }
 
-const API_URL = ''; // Replace with your actual API URL
+const API_URL = ""; // Replace with your actual API URL
 
 export async function getArticles(): Promise<Article[]> {
   const response = await fetch(`${API_URL}/articles`);
   if (!response.ok) {
-    throw new Error('Failed to fetch articles');
+    throw new Error("Failed to fetch articles");
   }
   return response.json();
 }
@@ -34,7 +35,7 @@ export async function getArticles(): Promise<Article[]> {
 export async function getArticleBySlug(slug: string): Promise<Article> {
   const response = await fetch(`${API_URL}/articles/${slug}`);
   if (!response.ok) {
-    throw new Error('Failed to fetch article');
+    throw new Error("Failed to fetch article");
   }
   return response.json();
 }
