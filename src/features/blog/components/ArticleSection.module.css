@@ -43,6 +43,8 @@
 }
 
 .markdownContent pre {
+  max-width: 100%;
+  overflow-x: auto;
   color: var(--primary-light);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-size: 0.95rem;
@@ -50,4 +52,9 @@
   /* background-color: var(--code-bg); */
   background-color: #313131;
   border-radius: 8px;
+}
+
+.markdownContent code {
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
 }
