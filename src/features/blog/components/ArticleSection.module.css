@@ -1,7 +1,8 @@
 .article {
   line-height: 1.8;
   font-size: 1.1rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
+  text-shadow: 1px 1px 1px rgb(8, 8, 8);
   margin-bottom: 3rem;
 }
 
@@ -20,10 +21,9 @@
 
 /* Estiliza o container que envolve o markdown */
 .markdownContent {
-  color: var(--text-secondary);
   margin-top: 2rem;
   font-size: 1.625rem;
-  font-weight: 600;
+  font-weight: 200;
 }
 
 .markdownContent h1 {

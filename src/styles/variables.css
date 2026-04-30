@@ -14,7 +14,7 @@
 
   /* Textos */
   --text-color: #0f172a; /* Texto principal (quase preto, tom de "ardósia" escuro) */
-  --text-secondary: #000000; /* Texto secundário para descrições ou datas no blog (cinza frio) */
+  --text-secondary: #66666686; /* Texto secundário para descrições ou datas no blog (cinza frio) */
   --text-muted: #f8f8f8; /* Texto secundário para descrições ou datas no blog (cinza frio) */
   /* --text-muted: #d7d7d8; */
   /* Bordas e divisores */

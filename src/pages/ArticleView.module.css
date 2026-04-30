@@ -2,5 +2,6 @@
   max-width: 1100px;
   margin: 0 auto;
   padding: 4rem 1rem;
-  color: var(--text-color);
+  color: var(--text-muted);
+  text-shadow: 1px 1px 1px rgb(8, 8, 8);
 }
