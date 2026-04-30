@@ -1,0 +1,6 @@
+.articleContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+  color: var(--text-color);
+}

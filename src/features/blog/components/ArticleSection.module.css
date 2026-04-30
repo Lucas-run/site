@@ -1,0 +1,53 @@
+.article {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+}
+
+/* Tratamento para elementos HTML que vierem do banco (caso use Rich Text) */
+.article h2,
+.article h3 {
+  color: var(--primary-dark);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.article p {
+  margin-bottom: 1.5rem;
+}
+
+/* Markdown */
+
+/* Estiliza o container que envolve o markdown */
+.markdownContent {
+  color: var(--text-secondary);
+  margin-top: 2rem;
+  font-size: 1.625rem;
+  font-weight: 600;
+}
+
+.markdownContent h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.markdownContent p {
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.markdownContent img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.markdownContent pre {
+  color: var(--primary-light);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.95rem;
+  padding: 1rem;
+  /* background-color: var(--code-bg); */
+  background-color: #313131;
+  border-radius: 8px;
+}

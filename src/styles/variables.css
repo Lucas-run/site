@@ -14,6 +14,7 @@
 
   /* Textos */
   --text-color: #0f172a; /* Texto principal (quase preto, tom de "ardósia" escuro) */
+  --text-secondary: #000000; /* Texto secundário para descrições ou datas no blog (cinza frio) */
   --text-muted: #f8f8f8; /* Texto secundário para descrições ou datas no blog (cinza frio) */
   /* --text-muted: #d7d7d8; */
   /* Bordas e divisores */
@@ -23,7 +24,7 @@
   --primary-color: #1e3a8a; /* Azul escuro corporativo/tech (Botões principais, ícones de destaque) */
   --primary-hover: #172554; /* Um azul ainda mais escuro para o hover do botão */
   --primary-light: #dbeafe; /* Azul muito clarinho (ótimo para fundo de badges ou tags do blog) */
-  --primary-dark: #381e8a;
+  --primary-dark: #221844;
   --danger: #8a381e;
 
   /* Medidas */
