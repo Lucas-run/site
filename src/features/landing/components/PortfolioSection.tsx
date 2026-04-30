@@ -1,15 +1,9 @@
 import { useEffect, useState } from "react";
 import styles from "./PortfolioSection.module.css";
-import { getFeaturedProjects } from "../services/portfolio.service";
+import { getFeaturedProjects, type Project } from "../services/portfolio.service";
 import { Container } from "../../../components/ui/Container";
 import { ProjectCard } from "../../../components/ui/ProjectCard";
 
-interface Project {
-  id: string;
-  name: string;
-  description: string;
-  thumbnail: string;
-}
 
 export function PortfolioSection() {
   const [projects, setProjects] = useState<Project[]>([]);

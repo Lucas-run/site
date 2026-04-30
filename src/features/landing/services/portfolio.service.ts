@@ -1,4 +1,4 @@
-import type { Article } from "../../blog/services/blog.service";
+// import type { Article } from "../../blog/services/blog.service";
 
 export interface Project {
   id: string;
@@ -8,12 +8,12 @@ export interface Project {
   slug?: string;
   userId: string;
   user: string;
-  articles: Article[];
+  article: { id: string; slug: string } | null;
   createdAt: Date;
   updatedAt: Date;
 }
 
-export async function getFeaturedProjects() {
+export async function getFeaturedProjects(): Promise<Project[]> {
   const response = await fetch("/projects/projects", {
     headers: {
       "Content-Type": "application/json",

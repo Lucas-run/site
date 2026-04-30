@@ -59,6 +59,9 @@ export default function Navbar() {
             <Link to="/blog" onClick={closeMenu}>
               Blog
             </Link>
+            <Link to="/projects" onClick={closeMenu}>
+              Projetos
+            </Link>
           </nav>
         </div>
       </Container>
