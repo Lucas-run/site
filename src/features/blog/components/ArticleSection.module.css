@@ -42,7 +42,10 @@
   border-radius: 8px;
 }
 
-.markdownContent pre {
+.markdownContent pre,
+.markdownContent blockquote code,
+.markdownContent li code{
+  display: block;
   max-width: 100%;
   overflow-x: auto;
   color: var(--primary-light);

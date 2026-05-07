@@ -19,6 +19,7 @@
   /* --text-muted: #d7d7d8; */
   /* Bordas e divisores */
   --border-color: #cbd5e1;
+  --font-family-secondary: 'Inter', sans-serif;
 
   /* Cores de destaque */
   --primary-color: #1e3a8a; /* Azul escuro corporativo/tech (Botões principais, ícones de destaque) */
